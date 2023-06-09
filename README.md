@@ -29,17 +29,17 @@ https://www.kaggle.com/datasets/nicholasjhana/energy-consumption-generation-pric
 # Used Tools
 ## Connect
 
-- [Azure API Management](https://docs.microsoft.com/en-us/azure/api-management/api-management-key-concepts)
-  >> API Management (APIM) is a way to create consistent and modern API gateways for existing back-end services.
+- [FastAPI](https://fastapi.tiangolo.com/)
+  >> FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints.
   
 ## Buffer
 
-- [Azure Event Hubs](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)
-  >> Azure Event Hubs is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. Data sent to an event hub can be transformed and stored by using any real-time analytics provider or batching/storage adapters.
+- [Apache Kafka](https://kafka.apache.org/)
+  >> Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration, and mission-critical applications.
 
 ## Processing
 
-- [Azure Function](https://docs.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- [Apache Spark](https://spark.apache.org/)
   >> Azure Functions is a serverless solution that allows you to write less code, maintain less infrastructure, and save on costs. Instead of worrying about deploying and maintaining servers, the cloud infrastructure provides all the up-to-date resources needed to keep your applications running.
 
 
