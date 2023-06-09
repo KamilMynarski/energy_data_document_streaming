@@ -1,4 +1,6 @@
 ### Energy demand, generation document streaming project
+![energy_image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/fd754af1-5f27-43e5-bf9e-175a8e1618cd)
+
 
 # Introduction & Goals
 
