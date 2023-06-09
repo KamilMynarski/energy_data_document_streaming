@@ -6,6 +6,8 @@
 
 # Introduction & Goals
 
+**Main goals:**
+Main goal is to create end-to-end pipeline that will start with csv data file from kaggle and end with streamlit visualization of 24-hour average calculated for each parameter.
 
 
 ## 1. Dataset
