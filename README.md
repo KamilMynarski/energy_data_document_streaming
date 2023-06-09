@@ -39,5 +39,6 @@ Average hourly generation of Solar energy for streamed data:
 Average actual demand:
 ![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/05083df1-765f-4a54-b551-b52f3cbae754)
 
-As we can see solar energy is useful for covering midday peak but evening peak must be covered by other sources, for example Fossil Gas
+As we can see solar energy is useful for covering midday peak but evening peak must be covered by other sources, for example Fossil Gas:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/18cb3558-5982-4c0e-9434-9dc315b75a0f)
 
