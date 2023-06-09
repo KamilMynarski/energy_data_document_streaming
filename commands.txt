@@ -24,6 +24,7 @@
 
 
 
+
 build individual API container 
 docker build -t api-ingest .
 
