@@ -32,3 +32,6 @@ https://www.kaggle.com/datasets/nicholasjhana/energy-consumption-generation-pric
 
 - [Streamlit](https://streamlit.io)
   >> Streamlit is an open-source app framework for Machine Learning and Data Science teams.
+
+Average hourly generation of Solar energy for streamed data:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/87621949-5965-42e0-b463-471800047743)
