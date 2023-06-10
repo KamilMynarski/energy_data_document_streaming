@@ -28,6 +28,7 @@ High level template of the project:
   - [Storage](#storage)
   - [Connect to Storage](#connect-to-storage)
   - [Visualization](#visualization)
+- [Data Preprocessing](#data-preprocessing)
 
 
 
@@ -80,3 +81,5 @@ Average actual demand:
 As we can see solar energy is useful for covering midday peak but evening peak must be covered by other sources, for example Fossil Gas:
 ![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/18cb3558-5982-4c0e-9434-9dc315b75a0f)
 
+
+## Data Preprocessing
