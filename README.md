@@ -83,3 +83,64 @@ As we can see solar energy is useful for covering midday peak but evening peak m
 
 
 ## Data Preprocessing
+
+Lets check the data file:
+
+```python
+df = pd.read_csv ('client/energy_dataset.csv')
+df.isnull().sum() / df.shape[0] * 100.00
+
+time                                             0.000000
+generation biomass                               0.054187
+generation fossil brown coal/lignite             0.051335
+generation fossil coal-derived gas               0.051335
+generation fossil gas                            0.051335
+generation fossil hard coal                      0.051335
+generation fossil oil                            0.054187
+generation fossil oil shale                      0.051335
+generation fossil peat                           0.051335
+generation geothermal                            0.051335
+generation hydro pumped storage aggregated     100.000000
+generation hydro pumped storage consumption      0.054187
+generation hydro run-of-river and poundage       0.054187
+generation hydro water reservoir                 0.051335
+generation marine                                0.054187
+generation nuclear                               0.048483
+generation other                                 0.051335
+generation other renewable                       0.051335
+generation solar                                 0.051335
+generation waste                                 0.054187
+generation wind offshore                         0.051335
+generation wind onshore                          0.051335
+forecast solar day ahead                         0.000000
+forecast wind offshore eday ahead              100.000000
+forecast wind onshore day ahead                  0.000000
+total load forecast                              0.000000
+total load actual                                0.102669
+price day ahead                                  0.000000
+price actual                                     0.000000
+```
+So the issue with this data set is that we have two completly empty columns, several non-standard signs in columns names and neglible Nan values in other columns.
+To remove these issues:
+
+```python
+#remove non-standard characters in columns names
+df.columns = df.columns.str.replace(' ','_')
+df.columns = df.columns.str.replace('/','_')
+df.columns = df.columns.str.replace('-','_')
+
+# these two columns have mainly Nan values so lets remove them
+df_reduced_columns = df.drop(['generation_hydro_pumped_storage_aggregated','forecast_wind_offshore_eday_ahead'],axis=1)
+
+# there are some rows with Nulls in other columns so lets remove them
+df_reduced_rows = df_reduced_columns.dropna()
+```
+Now lets create JSON file.
+
+```python
+df_reduced_rows['json'] = df_reduced_rows.to_json(orient='records', lines=True).splitlines()
+
+dfjson = df_reduced_rows['json']
+
+np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
+```
