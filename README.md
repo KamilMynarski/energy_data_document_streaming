@@ -1,6 +1,6 @@
 # Data Engineering Project
 
-### Energy demand and generation document streaming 
+### Energy data document streaming 
 ![energy_image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/fd754af1-5f27-43e5-bf9e-175a8e1618cd)
 
 
