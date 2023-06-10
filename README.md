@@ -18,9 +18,22 @@ High level template of the project:
 
 >>Current state: all tools used in the app are containerized except streamlit (to be implemented) 
 
+# Contents
+
+- [The Data Set](#the-data-set)
+- [Used Tools](#used-tools)
+  - [Connect](#connect)
+  - [Buffer](#buffer)
+  - [Processing](#processing)
+  - [Storage](#storage)
+  - [Connect to Storage](#connect-to-storage)
+  - [Visualization](#visualization)
 
 
-## 1. Dataset
+
+
+
+## The Data Set
 
 For this project i used Kaggle data:
 
