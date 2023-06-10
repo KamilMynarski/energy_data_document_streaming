@@ -6,15 +6,18 @@
 
 # Introduction & Goals
 
-Hourly electricity consumption and generation varies throughout the day and across seasons. Time series data such as used in this project gives us oportunity to represent these changes.
+Hourly electricity consumption and generation varies throughout the day and across seasons. Time series data such as used in this project gives us oportunity to represent these changes. 
 
 **Main goals:**
 
-Main goal is to create end-to-end pipeline that will start with csv data file and end with streamlit visualization of 24-hour average calculated for each parameter. After initial transformation all data will be in the JSON format, and will be stored in Mongo DB.
+Main goal of this project is to demonstrate how to create end-to-end pipeline that will stream, process and visualize data in the form of JSON (after initial trasformation from provided CSV file). To improve application deployment docker containers will be utilized on every pipeline stage.
 
 
 High level template of the project:
 ![Task Tracking (1)](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/8ebde6dc-b3c7-4a64-a462-a3df8fe36932)
+
+>>Current state: all tools used in the app are containerized except streamlit (to be implemented) 
+
 
 
 ## 1. Dataset
