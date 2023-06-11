@@ -154,6 +154,8 @@ For testing I used single example JSON sent by Postman: [client](client/Energy D
 
 [a relative link](energy_data_document_streaming/client/Energy Demand.postman_collection.json)
 
+: [README](README.md)
+
 
 ## Conclusions
 
