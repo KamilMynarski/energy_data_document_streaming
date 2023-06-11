@@ -154,7 +154,13 @@ For testing I used single example JSON sent by Postman: [Postman collection](cli
 
 For proper sending Json documents I created API client that reads lines in file and sends them one by one using post method from Python request package: [API-Client](client/api-client.py)
 
-: [README](README.md)
+## Processing Data Stream
+
+To ingest data sent from API client I created fastAPI app that also is transforming JSON strings into bytes and is sending it into Kafka: [API-Ingest](API-Ingest/app/main.py)
+
+This app is deployed as a docker docker container. [Dockerfile](API-Ingest/dockerfile)
+
+
 
 
 ## Conclusions
