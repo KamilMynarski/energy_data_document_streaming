@@ -154,7 +154,7 @@ For proper sending Json documents I created API client that reads lines in file 
 
 To ingest data sent from API client I created fastAPI app that also is transforming JSON strings into bytes and is sending it into Kafka: [API-Ingest](API-Ingest/app/main.py)
 
-This app is deployed as a docker docker container. [Dockerfile](API-Ingest/dockerfile)
+This app is deployed as a docker container. [Dockerfile](API-Ingest/dockerfile)
 
 ## Visualizations
 
