@@ -74,14 +74,6 @@ https://www.kaggle.com/datasets/nicholasjhana/energy-consumption-generation-pric
 - [Streamlit](https://streamlit.io)
   >> Streamlit is an open-source app framework for Machine Learning and Data Science teams.
 
-Average hourly generation of Solar energy for streamed data:
-![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/87621949-5965-42e0-b463-471800047743)
-
-Average actual demand:
-![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/05083df1-765f-4a54-b551-b52f3cbae754)
-
-As we can see solar energy is useful for covering midday peak but evening peak must be covered by other sources, for example Fossil Gas:
-![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/18cb3558-5982-4c0e-9434-9dc315b75a0f)
 
 
 ## Data Preprocessing
@@ -169,6 +161,18 @@ This app is deployed as a docker docker container. [Dockerfile](API-Ingest/docke
 ![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/be6a24da-62ca-4150-89be-6d8062f00395)
 
 I have created streamlit application that is capable of showing 24-hour average of every parameter stored in the Mongo DB.
+
+## Demo
+
+Average hourly generation of Solar energy for streamed data:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/87621949-5965-42e0-b463-471800047743)
+
+Average actual demand:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/05083df1-765f-4a54-b551-b52f3cbae754)
+
+As we can see solar energy is useful for covering midday peak but evening peak must be covered by other sources, for example Fossil Gas:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/18cb3558-5982-4c0e-9434-9dc315b75a0f)
+
 
 ## Conclusions
 
