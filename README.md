@@ -166,6 +166,9 @@ This app is deployed as a docker docker container. [Dockerfile](API-Ingest/docke
 
 ## Visualizations
 
+![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/be6a24da-62ca-4150-89be-6d8062f00395)
+
+I have created streamlit application that is capable of showing 24-hour average of every parameter stored in the Mongo DB.
 
 ## Conclusions
 
