@@ -152,9 +152,8 @@ For proper sending Json documents I created API client that reads lines in file 
 
 ![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/810b66d4-eb03-4f0c-a94a-e5f230bf4826)
 
-To ingest data sent from API client I created fastAPI app that also is transforming JSON strings into bytes and is sending it into Kafka: [API-Ingest](API-Ingest/app/main.py)
-
-This app is deployed as a docker container. [Dockerfile](API-Ingest/dockerfile)
++ To ingest data sent from API client I created fastAPI app that also is transforming JSON strings into bytes and is sending it into Kafka: [API-Ingest](API-   Ingest/app/main.py) This app is deployed as a docker container. [Dockerfile](API-Ingest/dockerfile)
++ Next python script in pyspark consumes data from the kafka producer and in the same script I set up connection to mongodb for writing. Detail of the Pyspark script. [Pyspark](ApacheSpark/02-streaming-kafka-src-dst-mongodb.ipynb)
 
 ## Visualizations
 
