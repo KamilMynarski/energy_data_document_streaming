@@ -152,6 +152,8 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 For testing I used single example JSON sent by Postman: [client](client/Energy Demand.postman_collection.json)
 
+[a relative link](client/Energy Demand.postman_collection.json)
+
 
 ## Conclusions
 
