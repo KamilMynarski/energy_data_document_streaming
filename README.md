@@ -162,6 +162,9 @@ This app is deployed as a docker container. [Dockerfile](API-Ingest/dockerfile)
 
 I have created streamlit application that is capable of showing 24-hour average of every parameter stored in the Mongo DB.
 
+As you can see in [Streamlit app code](Streamlit/streamlitapp.py) curently streamlit have direct access to Mongo DB (using user and password) which isnt desirable (it will be preferable to add API between Streamlit and Mongo DB).
+
+
 ## Demo
 
 Average hourly generation of Solar energy for streamed data:
