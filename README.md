@@ -162,4 +162,4 @@ It turned out that adding additional environment parameter to the kafka image re
 
 >> KAFKA_ENABLE_KRAFT=no  
 
-But the biggest reason for this problem was the fact that I am using "latest" image for this container which expose the app for unpredictable changes in the image. So the main take away is I should use specific version of image.
+But the biggest reason for this problem was the fact that I am using "latest" image for this container which expose the app for unpredictable changes in the docker image. So the main take away is I should use specific version of the image.
