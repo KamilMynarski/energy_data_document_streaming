@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "321d07a7-9229-485c-bec0-23509ea0be34",
+		"name": "Energy Demand",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27050550"
+	},
+	"item": [
+		{
+			"name": "Energy demand test",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"time\":\"2015-01-01 00:00:00+01:00\",\"generation_biomass\":447.0,\"generation_fossil_brown_coal_lignite\":329.0,\"generation_fossil_coal_derived_gas\":0.0,\"generation_fossil_gas\":4844.0,\"generation_fossil_hard_coal\":4821.0,\"generation_fossil_oil\":162.0,\"generation_fossil_oil_shale\":0.0,\"generation_fossil_peat\":0.0,\"generation_geothermal\":0.0,\"generation_hydro_pumped_storage_consumption\":863.0,\"generation_hydro_run_of_river_and_poundage\":1051.0,\"generation_hydro_water_reservoir\":1899.0,\"generation_marine\":0.0,\"generation_nuclear\":7096.0,\"generation_other\":43.0,\"generation_other_renewable\":73.0,\"generation_solar\":49.0,\"generation_waste\":196.0,\"generation_wind_offshore\":0.0,\"generation_wind_onshore\":6378.0,\"forecast_solar_day_ahead\":17.0,\"forecast_wind_onshore_day_ahead\":6436.0,\"total_load_forecast\":26118.0,\"total_load_actual\":25385.0,\"price_day_ahead\":50.1,\"price_actual\":65.41}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:80/EnergyItem",
+					"host": [
+						"localhost"
+					],
+					"port": "80",
+					"path": [
+						"EnergyItem"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
