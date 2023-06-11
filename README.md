@@ -150,12 +150,17 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 ## Data Stream
 
+For testing I used single example JSON sent by Postman
 
 
 ## Conclusions
 
 I encountered some issues with docker containers - especially Kafka one. It was working for some time just fine and then suddenly stopped with an error:
+
 >> Exception in thread "main" java.lang.IllegalArgumentException: requirement failed: controller.listener.names must contain at least one value appearing in the 'listeners' configuration when running the KRaft controller role.
+
 It turned out that adding additional environment parameter to the kafka image resolves this issue:
+
 >> KAFKA_ENABLE_KRAFT=no  
-But the biggest reason for this problem was the fact that I am using "latest" image for this container which expose the app for unpredictable changes in the image. So the main take away is I should use specific version of image.
+
+But the biggest reason for this problem was the fact that I am using "latest" image for this container which expose the app for unpredictable changes in the docker image. So the main take away is I should use specific version of the image.
