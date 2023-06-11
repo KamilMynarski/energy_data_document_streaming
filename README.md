@@ -150,6 +150,8 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 ## Data Stream
 
+![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/4a38594f-0301-4a2d-8d06-57c3f6c259a8)
+
 For testing I used single example JSON sent by Postman: [Postman collection](client/Postman/Energy_Demand.postman_collection)
 
 For proper sending Json documents I created API client that reads lines in file and sends them one by one using post method from Python request package: [API-Client](client/api-client.py)
