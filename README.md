@@ -30,6 +30,7 @@ High level template of the project:
   - [Visualization](#visualization)
 - [Data Preprocessing](#data-preprocessing)
 - [Data Stream](#data-stream)
+- [Conclusions](#conclusions)
 
 
 
@@ -148,3 +149,11 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 
 ## Data Stream
+
+
+
+## Conclusions
+
+I encountered some issues with docker containers - especially Kafka one. It was working for some time just fine and then suddenly stopped with an error:
+>> Exception in thread "main" java.lang.IllegalArgumentException: requirement failed: controller.listener.names must contain at least one value appearing in the 'listeners' configuration when running the KRaft controller role.
+
