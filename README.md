@@ -74,14 +74,6 @@ https://www.kaggle.com/datasets/nicholasjhana/energy-consumption-generation-pric
 - [Streamlit](https://streamlit.io)
   >> Streamlit is an open-source app framework for Machine Learning and Data Science teams.
 
-Average hourly generation of Solar energy for streamed data:
-![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/87621949-5965-42e0-b463-471800047743)
-
-Average actual demand:
-![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/05083df1-765f-4a54-b551-b52f3cbae754)
-
-As we can see solar energy is useful for covering midday peak but evening peak must be covered by other sources, for example Fossil Gas:
-![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/18cb3558-5982-4c0e-9434-9dc315b75a0f)
 
 
 ## Data Preprocessing
@@ -150,11 +142,38 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 ## Data Stream
 
+![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/4a38594f-0301-4a2d-8d06-57c3f6c259a8)
+
 For testing I used single example JSON sent by Postman: [Postman collection](client/Postman/Energy_Demand.postman_collection)
 
 For proper sending Json documents I created API client that reads lines in file and sends them one by one using post method from Python request package: [API-Client](client/api-client.py)
 
-: [README](README.md)
+## Processing Data Stream
+
+![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/810b66d4-eb03-4f0c-a94a-e5f230bf4826)
+
++ To ingest data sent from API client I created fastAPI app that also is transforming JSON strings into bytes and is sending it into Kafka: [API-Ingest](API-Ingest/app/main.py)
++ Next python script in pyspark consumes data from the kafka producer and in the same script I set up connection to mongodb for writing. Detail of the Pyspark script. [Pyspark](ApacheSpark/02-streaming-kafka-src-dst-mongodb.ipynb)
+
+## Visualizations
+
+![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/be6a24da-62ca-4150-89be-6d8062f00395)
+
+I have created streamlit application that is capable of showing 24-hour average of every parameter stored in the Mongo DB.
+
+As you can see in [Streamlit app code](Streamlit/streamlitapp.py) curently streamlit have direct access to Mongo DB (using user and password) which isnt desirable (it will be preferable to add API between Streamlit and Mongo DB).
+
+
+## Demo
+
+Average hourly generation of Solar energy for streamed data:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/87621949-5965-42e0-b463-471800047743)
+
+Average actual demand:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/05083df1-765f-4a54-b551-b52f3cbae754)
+
+As we can see solar energy is useful for covering midday peak but evening peak must be covered by other sources, for example Fossil Gas:
+![image](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/18cb3558-5982-4c0e-9434-9dc315b75a0f)
 
 
 ## Conclusions
