@@ -150,9 +150,9 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 ## Data Stream
 
-For testing I used single example JSON sent by Postman: [client](client/Energy Demand.postman_collection.json)
+For testing I used single example JSON sent by Postman: [Postman collection](client/Postman/Energy_Demand.postman_collection)
 
-[a relative link](client/Postman/Energy_Demand.postman_collection)
+For proper sending Json documents I created API client that reads lines in file and sends them one by one using post method from Python request package: [API-Client](client/api-client.py)
 
 : [README](README.md)
 
