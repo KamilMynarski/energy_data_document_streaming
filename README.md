@@ -29,6 +29,7 @@ High level template of the project:
   - [Connect to Storage](#connect-to-storage)
   - [Visualization](#visualization)
 - [Data Preprocessing](#data-preprocessing)
+- [Data Stream](#data-stream)
 
 
 
@@ -144,3 +145,6 @@ dfjson = df_reduced_rows['json']
 
 np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 ```
+
+
+## Data Stream
