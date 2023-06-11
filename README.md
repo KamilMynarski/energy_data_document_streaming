@@ -150,6 +150,7 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 ## Data Stream
 
+For testing I used single example JSON sent by Postman
 
 
 ## Conclusions
