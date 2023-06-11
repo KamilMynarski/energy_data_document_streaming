@@ -150,7 +150,11 @@ np.savetxt(r'./client/output.txt', dfjson.values, fmt='%s')
 
 ## Data Stream
 
-For testing I used single example JSON sent by Postman
+For testing I used single example JSON sent by Postman: [client](client/Energy Demand.postman_collection.json)
+
+[a relative link](energy_data_document_streaming/client/Energy Demand.postman_collection.json)
+
+: [README](README.md)
 
 
 ## Conclusions
