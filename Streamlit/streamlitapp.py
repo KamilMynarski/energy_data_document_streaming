@@ -36,10 +36,6 @@ for i in columns:
         columns_dict[i.replace('_',' ').title()] = i    
 
 
-# option = st.sidebar.selectbox(
-#     'Select energy parameter to be show on chart',
-#     ('Email', 'Home phone', 'Mobile phone'))
-
 option = st.sidebar.selectbox(
     'Select energy parameter to be show on chart',
     columns_dict)    

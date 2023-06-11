@@ -71,7 +71,7 @@ async def post_energy_item(item: EnergyItem): #body awaits a json with energy da
         # Encode the created item if successful into a JSON and return it to the client with 201
         return JSONResponse(content=json_of_item, status_code=201)
     
-    # Will be thrown by datetime if the date does not fit
+
     # All other value errors are automatically taken care of because of the EnergyItem Class
     except ValueError:
         return JSONResponse(content=jsonable_encoder(item), status_code=400)
