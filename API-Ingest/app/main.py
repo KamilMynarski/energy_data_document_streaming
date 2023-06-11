@@ -1,14 +1,12 @@
-# You need this to use FastAPI, work with statuses and be able to end HTTPExceptions
 from fastapi import FastAPI, status, HTTPException
  
-# You need this to be able to turn classes into JSONs and return
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-# Needed for json.dumps
+
 import json
 
-# Both used for BaseModel
+
 from pydantic import BaseModel
 
 from datetime import datetime
@@ -47,29 +45,19 @@ class EnergyItem(BaseModel):
     price_day_ahead:                                float
     price_actual:                                   float
 
-# This is important for general execution and the docker later
+
 app = FastAPI()
 
-# Base URL
+# Base URL for testing
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
-# Add a new invoice
+# Add a new energy data
 @app.post("/EnergyItem")
-async def post_invoice_item(item: EnergyItem): #body awaits a json with invoice item information
+async def post_energy_item(item: EnergyItem): #body awaits a json with energy data information
     print("Message received")
     try:
-        # Evaluate the timestamp and parse it to datetime object you can work with
-        # date = datetime.strptime(item.InvoiceDate, "%d/%m/%Y %H:%M")
-
-        # print('Found a timestamp: ', date)
-
-        # Replace strange date with new datetime
-        # Use strftime to parse the string in the right format (replace / with - and add seconds)
-        # item.InvoiceDate = date.strftime("%d-%m-%Y %H:%M:%S")
-        # print("New item date:", item.InvoiceDate)
-        
         # Parse item back to json
         json_of_item = jsonable_encoder(item)
         
@@ -80,7 +68,7 @@ async def post_invoice_item(item: EnergyItem): #body awaits a json with invoice 
         # Produce the string
         produce_kafka_string(json_as_string)
 
-        # Encode the created customer item if successful into a JSON and return it to the client with 201
+        # Encode the created item if successful into a JSON and return it to the client with 201
         return JSONResponse(content=json_of_item, status_code=201)
     
     # Will be thrown by datetime if the date does not fit
