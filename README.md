@@ -154,6 +154,7 @@ For proper sending Json documents I created API client that reads lines in file 
 
 + To ingest data sent from API client I created fastAPI app that also is transforming JSON strings into bytes and is sending it into Kafka: [API-Ingest](API-Ingest/app/main.py)
 + Next python script in pyspark consumes data from the kafka producer and in the same script I set up connection to mongodb for writing. Detail of the Pyspark script. [Pyspark](ApacheSpark/02-streaming-kafka-src-dst-mongodb.ipynb)
++ ToDo add MongoDB stage description
 
 ## Visualizations
 
