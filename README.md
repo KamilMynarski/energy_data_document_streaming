@@ -135,7 +135,7 @@ df_reduced_columns = df.drop(['generation_hydro_pumped_storage_aggregated','fore
 # there are some rows with Nulls in other columns so lets remove them
 df_reduced_rows = df_reduced_columns.dropna()
 ```
-From now on we will be operating on JSON format so lets trasnform dataframe to json and save the file in txt format.
+From now on we I be operating on JSON format so lets trasnform dataframe to json and save the file in txt format.
 
 ```python
 df_reduced_rows['json'] = df_reduced_rows.to_json(orient='records', lines=True).splitlines()
