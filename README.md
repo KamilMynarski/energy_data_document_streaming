@@ -30,6 +30,7 @@ High level template of the project:
   - [Visualization](#visualization)
 - [Data Preprocessing](#data-preprocessing)
 - [Data Stream](#data-stream)
+- [Processing Data Stream](#processing-data-stream)
 - [Conclusions](#conclusions)
 
 
