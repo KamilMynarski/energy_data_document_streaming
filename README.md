@@ -31,6 +31,8 @@ High level template of the project:
 - [Data Preprocessing](#data-preprocessing)
 - [Data Stream](#data-stream)
 - [Processing Data Stream](#processing-data-stream)
+- [Visualizations](#visualizations)
+- [Demo](#demo)
 - [Conclusions](#conclusions)
 
 
