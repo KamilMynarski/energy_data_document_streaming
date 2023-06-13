@@ -157,15 +157,15 @@ For proper sending Json documents I created API client that reads lines in file 
 
 + To ingest data sent from API client I created fastAPI app that also is transforming JSON strings into bytes and is sending it into Kafka: [API-Ingest](API-Ingest/app/main.py)
 + Next python script in pyspark consumes data from the kafka producer and in the same script I set up connection to mongodb for writing. Detail of the Pyspark script. [Pyspark](ApacheSpark/02-streaming-kafka-src-dst-mongodb.ipynb)
-+ ToDo add MongoDB stage description
++ For admin interface I used Mongo Express. Example of stored document ine energy_data collection:
+![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/c4e438df-77c5-400e-842b-2361432ccffc)
+
 
 ## Visualizations
 
 ![image](https://github.com/KamilMynarski/energy_data_document_streaming/assets/78103509/be6a24da-62ca-4150-89be-6d8062f00395)
 
 I have created streamlit application that is capable of showing 24-hour average of every parameter stored in the Mongo DB.
-
-As you can see in [Streamlit app code](Streamlit/streamlitapp.py) curently streamlit have direct access to Mongo DB (using user and password) which isnt desirable (it will be preferable to add API between Streamlit and Mongo DB).
 
 
 ## Demo
