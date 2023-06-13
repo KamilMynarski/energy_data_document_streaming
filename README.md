@@ -191,3 +191,6 @@ It turned out that adding additional environment parameter to the kafka image re
 >> KAFKA_ENABLE_KRAFT=no  
 
 But the biggest reason for this problem was the fact that I am using "latest" image for this container which expose the app for unpredictable changes in the docker image. So the main take away is I should use specific version of the image.
+
+Another conclusion is regarding secuirity: as you can see in [Streamlit app code](Streamlit/streamlitapp.py) curently streamlit have direct access to Mongo DB (using user and password) which isnt desirable (it will be preferable to add API between Streamlit and Mongo DB).
+
