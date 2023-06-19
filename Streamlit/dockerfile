@@ -6,3 +6,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
     pip install --requirement /tmp/requirements.txt
 
 COPY ./app /app
+
+EXPOSE 8501
+
+ENTRYPOINT ["streamlit", "run", "./app/main.py", "--server.port=8501", "--server.address=0.0.0.0"]

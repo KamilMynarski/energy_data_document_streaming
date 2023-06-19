@@ -1,19 +1,19 @@
-# from numpy import double
-# import streamlit as st
-# from pandas import DataFrame
-# import pandas as pd
+from numpy import double
+import streamlit as st
+from pandas import DataFrame
+import pandas as pd
 
-# import numpy as np
+import numpy as np
 
-# import pymongo
-# import matplotlib.pyplot as plt
+import pymongo
+import matplotlib.pyplot as plt
 
-print('aaa')
 
-"""
+
 
 #data = pd.read_csv("data.csv")
-myclient = pymongo.MongoClient("mongodb://localhost:27017/",username='root',password='example')
+#myclient = pymongo.MongoClient("mongodb://localhost:27017/",username='root',password='example')
+myclient = pymongo.MongoClient("mongodb://mongo:27017/",username='root',password='example')
 mydb = myclient["energy_demand"]
 mycol = mydb["energy_data"] 
 
@@ -70,5 +70,3 @@ st.pyplot(fig)
 
 
 
-
-"""
