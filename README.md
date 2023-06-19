@@ -16,7 +16,7 @@ Main goal of this project is to demonstrate how to create end-to-end pipeline th
 High level template of the project:
 ![Task Tracking (1)](https://github.com/KamilMynarski/energy_demand_documment_streaming/assets/78103509/8ebde6dc-b3c7-4a64-a462-a3df8fe36932)
 
->>Current state: all tools used in the app are containerized except streamlit (to be implemented) 
+>>Current state: all tools used in the app are containerized.
 
 # Contents
 
