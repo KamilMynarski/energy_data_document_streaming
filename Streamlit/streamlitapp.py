@@ -1,3 +1,5 @@
+# this is old version current version running in docker container streamlit/app/main.app
+
 from numpy import double
 import streamlit as st
 from pandas import DataFrame
