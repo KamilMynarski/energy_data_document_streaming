@@ -1,4 +1,4 @@
-# this is old version current version running in docker container streamlit/app/main.app
+# this is old version current version running in docker container /app/main.app
 
 from numpy import double
 import streamlit as st
